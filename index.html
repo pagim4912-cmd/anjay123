@@ -1,0 +1,210 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ruang Edukasi</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+      <h2>Ruang Edukasi</h2>
+      <button id="closeSidebar">×</button>
+    </div>
+
+    <button class="menu-button" onclick="showHome()">
+      🏠 Home
+    </button>
+
+    <button class="menu-button" onclick="showExplore()">
+      🔎 Jelajah
+    </button>
+
+    <button class="menu-button" onclick="toggleDarkMode()">
+      🌙 Mode Gelap
+    </button>
+
+  </aside>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <button class="hamburger" id="openSidebar">
+      ☰
+    </button>
+
+    <h1>Ruang Edukasi</h1>
+
+  </header>
+
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HOME -->
+    <section id="homePage">
+
+      <div class="hero">
+        <h2>Selamat Datang di Ruang Edukasi</h2>
+
+        <p>
+          Tempat untuk membaca dan mempelajari berbagai
+          informasi pendidikan dan sosial.
+        </p>
+
+        <button class="primary-button" onclick="showExplore()">
+          Jelajahi Artikel
+        </button>
+      </div>
+
+
+      <h2 class="section-title">
+        Artikel Terbaru
+      </h2>
+
+      <div class="articles">
+
+        <!-- ARTIKEL 1 -->
+        <article class="card">
+
+          <div class="cover">
+            🤝
+          </div>
+
+          <div class="card-content">
+
+            <span class="tag">
+              STEREOTIP
+            </span>
+
+            <h3>
+              Apa Itu Stereotip?
+            </h3>
+
+            <p>
+              Memahami pengertian stereotip,
+              contoh dalam kehidupan sehari-hari,
+              dan pengaruhnya terhadap masyarakat.
+            </p>
+
+            <button
+              class="read-button"
+              onclick="openArticle('stereotip')">
+              Baca Artikel
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- ARTIKEL 2 -->
+        <article class="card">
+
+          <div class="cover">
+            🧠
+          </div>
+
+          <div class="card-content">
+
+            <span class="tag">
+              SOSIOLOGI
+            </span>
+
+            <h3>
+              Mengenal Interaksi Sosial
+            </h3>
+
+            <p>
+              Memahami bagaimana manusia berhubungan
+              dan berinteraksi dengan orang lain.
+            </p>
+
+            <button
+              class="read-button"
+              onclick="openArticle('interaksi')">
+              Baca Artikel
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPLORE -->
+    <section id="explorePage" class="hidden">
+
+      <h2 class="section-title">
+        Jelajah Artikel
+      </h2>
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Cari artikel..."
+          oninput="searchArticles()">
+
+      </div>
+
+      <div id="searchResults" class="articles">
+
+        <!-- HASIL PENCARIAN AKAN MUNCUL DI SINI -->
+
+      </div>
+
+    </section>
+
+
+    <!-- ARTICLE PAGE -->
+    <section id="articlePage" class="hidden">
+
+      <button class="back-button" onclick="showExplore()">
+        ← Kembali
+      </button>
+
+      <article class="article">
+
+        <span class="tag" id="articleTag">
+          ARTIKEL
+        </span>
+
+        <h2 id="articleTitle">
+          Judul Artikel
+        </h2>
+
+        <p id="articleText">
+          Isi artikel akan muncul di sini.
+        </p>
+
+      </article>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>© 2026 Ruang Edukasi</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+            </html>
